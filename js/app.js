@@ -84,7 +84,7 @@ function mostrarAPOD(apod) {
                 ${dayjs(apod.date).format("DD [de] MMMM [de] YYYY")}
                 </p>
 
-                <img src="${apod.hdurl}" alt="${apod.title}" />
+                <img src="${apod.hdurl || apod.url}" alt="${apod.title}" />
 
                 <p>${apod.explanation}</p>
 `;
