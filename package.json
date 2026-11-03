@@ -2,9 +2,22 @@
   "name": "explorador-apod-integrado",
   "version": "1.0.0",
   "private": true,
-  "description": "Explorador de Astronomy Picture of the Day de NASA",
+  "description": "Explorador APOD del Grupo 6: imagen astronómica del día de NASA",
+  "main": "index.js",
   "scripts": {},
+  "keywords": [],
+  "author": "Felipe Ortiz Gamboa",
+  "license": "ISC",
+  "type": "commonjs",
   "dependencies": {
     "dayjs": "^1.11.23"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crtiandev/LabAPOD.git"
+  },
+  "bugs": {
+    "url": "https://github.com/crtiandev/LabAPOD/issues"
+  },
+  "homepage": "https://github.com/crtiandev/LabAPOD#readme"
 }
