@@ -1,16 +1,9 @@
 {
-  "name": "labapod",
+  "name": "explorador-apod-integrado",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "private": true,
+  "description": "Explorador de Astronomy Picture of the Day de NASA",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "dependencies": {
-    "dayjs": "^1.11.23"
+    "start": "npx http-server ."
   }
 }
