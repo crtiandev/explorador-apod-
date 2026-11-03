@@ -1,20 +1,72 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Descripción breve del proyecto">
-  <title>Mi proyecto web</title>
+  <title>Explorador APOD</title>
+
+  <!-- ===== Fuentes de Google Fonts ===== -->
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Spectral:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS de Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <!-- CSS propio -->
   <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
-  <header class="site-header">
-    <h1>LabAPOD</h1>
+
+  <!-- ===== Encabezado ===== -->
+  <header class="container py-4 text-center">
+    <h1 class="h2">Explorador de la foto astronómica del día</h1>
+    <p class="mb-0">Astronomy Picture of the Day (APOD) de la NASA</p>
   </header>
 
-  <main>
+  <main class="container pb-5">
+    <div class="row g-4">
+
+      <!-- ===== Columna izquierda: búsqueda y resultado ===== -->
+      <div class="col-lg-8">
+
+        <!-- ===== Búsqueda ===== -->
+        <section class="d-flex gap-2 mb-3">
+          <input type="date" id="fecha" class="form-control" min="1995-06-16"> <!-- el buscador ocupa todo el ancho disponible y se asigna la fecha mínima que el input acepta -->
+          <button id="btnBuscar" class="btn border">Buscar</button>
+        </section>
+
+        <!-- ===== Mensaje de Error ===== -->
+        <div id="error"></div>
+
+        <!-- ===== Resultado ===== -->
+        <div id="resultado"></div>
+
+      </div>
+
+      <!-- ===== Columna derecha: favoritos ===== -->
+      <aside class="col-lg-4">
+
+        <!-- Botón para guardar la APOD que se está viendo -->
+        <button id="btn-favorito" class="btn border w-100 mb-2">⭐ Guardar en favoritos</button>
+
+        <!-- Mensaje de favoritos -->
+        <p id="mensaje-favorito"></p>
+
+        <!-- Lista de favoritos (se llena desde app.js) -->
+        <section>
+          <h2 class="h5 mt-3">Favoritos</h2>
+          <ul id="lista-favoritos" class="list-group"></ul>
+        </section>
+
+      </aside>
+
+    </div>
   </main>
 
-  <script src="js/app.js" defer></script>
+  <!-- JS de Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <!-- Day.js, su idioma español y js propio -->
+  <script src="node_modules/dayjs/dayjs.min.js"></script>
+  <script src="node_modules/dayjs/locale/es.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>
