@@ -4,20 +4,20 @@
 
 /* ===== Variables de color y tipografía ===== */
 :root {
-  --azul-oscuro: #05070d;   /* fondo de la página */
-  --superficie: #0e1424;    /* cajas: inputs, panel de favoritos */
+  --azul-oscuro: #05070d;   
+  --superficie: #0e1424;    
   --borde: #1f2a42;
   --texto: #e8ebf2;
   --texto-suave: #98a2b6;
-  --luna: #cfdcff;          /* botón principal */
-  --estrella: #f1c75b;      /* todo lo relacionado con favoritos */
+  --luna: #cfdcff;          
+  --estrella: #f1c75b;      
   --error: #ff8a7a;
 
   --fuente-titulos: "Spectral", Georgia, serif;
   --fuente-texto: "Atkinson Hyperlegible", Arial, sans-serif;
 }
 
-/* ===== Base ===== */
+
 body {
   background-color: var(--azul-oscuro);
   color: var(--texto);
@@ -38,13 +38,11 @@ a {
   color: var(--luna);
 }
 
-/* Foco visible para quien navega con teclado */
 :focus-visible {
   outline: 2px solid var(--luna);
   outline-offset: 3px;
 }
 
-/* ===== Encabezado ===== */
 header {
   padding-top: 3.5rem !important;
   padding-bottom: 2rem !important;
@@ -54,8 +52,8 @@ header h1.h2 {
   font-size: clamp(1.9rem, 4vw, 2.75rem);
   line-height: 1.1;
   letter-spacing: -0.01em;
-  max-width: 22ch;           /* el título se parte en dos líneas */
-  margin: 0 auto 0.75rem;    /* auto a los lados lo centra */
+  max-width: 22ch;           
+  margin: 0 auto 0.75rem;   
 }
 
 header p {
@@ -64,8 +62,6 @@ header p {
   margin-inline: auto;
 }
 
-/* ===== Búsqueda ===== */
-/* input de fecha */
 #fecha.form-control {
   width: auto;
   flex: 0 0 auto;
@@ -77,7 +73,7 @@ header p {
   background-color: var(--superficie);
   border: 1px solid var(--borde);
   border-radius: 6px;
-  color-scheme: dark; /* icono del calendario claro */
+  color-scheme: dark; 
 }
 
 #fecha.form-control:focus {
@@ -98,7 +94,7 @@ header p {
   background-color: #ffffff;
 }
 
-/* ===== Mensaje de error ===== */
+
 #error:empty {
   display: none;
 }
@@ -111,8 +107,6 @@ header p {
   background-color: rgba(255, 138, 122, 0.08);
 }
 
-/* ===== Resultado (lo llena app.js) ===== */
-/* mientras no hay foto, se ve un espacio que invita a buscar */
 #resultado:empty {
   display: flex;
   align-items: center;
@@ -149,7 +143,6 @@ header p {
   margin-bottom: 0.25rem;
 }
 
-/* Primer párrafo después del título: la fecha */
 #resultado h2 + p,
 #resultado h3 + p {
   color: var(--estrella);
@@ -162,7 +155,6 @@ header p {
   line-height: 1.75;
 }
 
-/* ===== Columna de favoritos ===== */
 aside {
   align-self: flex-start;
 }
@@ -203,7 +195,6 @@ aside h2.h5 {
   font-size: 1.35rem;
 }
 
-/* La lista quita el estilo blanco de Bootstrap */
 #lista-favoritos {
   border-radius: 0;
 }
@@ -225,9 +216,9 @@ aside h2.h5 {
   color: var(--estrella);
 }
 
-/* Mensaje cuando todavía no hay favoritos */
 #lista-favoritos:empty::before {
   content: "Aún no tienes favoritos. Busca una fecha y guarda la foto que te guste.";
   color: var(--texto-suave);
   font-size: 0.95rem;
 }
+

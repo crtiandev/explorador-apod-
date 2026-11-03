@@ -1,1 +1,2 @@
+# npm instala las dependencias declaradas en package.json; node_modules no se entrega al repositorio.
 node_modules/

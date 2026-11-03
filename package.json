@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "description": "Explorador de Astronomy Picture of the Day de NASA",
-  "scripts": {
-    "start": "npx http-server ."
+  "scripts": {},
+  "dependencies": {
+    "dayjs": "^1.11.23"
   }
 }
